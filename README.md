@@ -1,6 +1,6 @@
 <h1>CommandBook</h1>
 
-[Sinestrea](https://github.com/sky-min) helped me
+### ★ [Sinestrea](https://github.com/sky-min) helped me ★
 
 <a href="https://www.php.net">
     <img src="https://img.shields.io/badge/PHP-777BB4?style=flat&logo=PHP&logoColor=white">
