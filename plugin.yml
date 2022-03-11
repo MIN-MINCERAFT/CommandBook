@@ -1,0 +1,9 @@
+name: CommandBook
+author: MIN
+version: 1.0.0
+api: 4.0.0
+main: Flugins\CommandBook\CommandBook
+
+permissions:
+  cmb.op:
+    default: op
