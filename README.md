@@ -14,8 +14,7 @@
 
 ### How to use ?
 
-- Enter /commandbook or /커맨드북 in the chat window
-- 채팅창에 /commandbook 또는 /커맨드북 을 입력하세요
+- Enter /commandbook in the chat window
 
 ### Features
 
