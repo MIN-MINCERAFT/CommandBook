@@ -12,7 +12,7 @@
     <img src="https://img.shields.io/badge/Virion-gray?style=flat">
 </a>
 
-### ★ [Sinestrea](https://github.com/sky-min) helped me
+### [Sinestrea](https://github.com/sky-min) helped me
 
 ### How to use ?
 
