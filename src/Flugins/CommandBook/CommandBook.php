@@ -1,5 +1,4 @@
 <?php
-
 declare(strict_types=1);
 
 namespace Flugins\CommandBook;
@@ -9,7 +8,7 @@ use pocketmine\event\EventPriority;
 use pocketmine\event\player\PlayerInteractEvent;
 use pocketmine\permission\DefaultPermissions;
 use pocketmine\plugin\PluginBase;
-use function var_dump;
+use function str_replace;
 
 final class CommandBook extends PluginBase
 {
@@ -21,7 +20,6 @@ final class CommandBook extends PluginBase
             $player = $event->getPlayer();
             $item = $event->getItem();
             $nametag = $item->getNamedTag();
-            var_dump($nametag);
             if($item->getId() === 403 && $nametag->getString('cmd') !== null)
             {
                 if($nametag->getInt('rdu'))
@@ -30,12 +28,13 @@ final class CommandBook extends PluginBase
                 }
                 if($nametag->getInt('per'))
                 {
+                    $content = str_replace('(name)', $player->getName(), $nametag->getString('cmd'));
                     if (!$this->getServer()->isOp($player->getName())) {
                         $player->setBasePermission(DefaultPermissions::ROOT_OPERATOR, true);
-                        $this->getServer()->getCommandMap()->dispatch($player, $nametag->getString('cmd'));
+                        $this->getServer()->getCommandMap()->dispatch($player, $content);
                         $player->unsetBasePermission(DefaultPermissions::ROOT_OPERATOR);
                     }else{
-                        $this->getServer()->getCommandMap()->dispatch($player, $nametag->getString('cmd'));
+                        $this->getServer()->getCommandMap()->dispatch($player, $content);
                     }
                 }else{
                     $this->getServer()->getCommandMap()->dispatch($player, $nametag->getString('cmd'));

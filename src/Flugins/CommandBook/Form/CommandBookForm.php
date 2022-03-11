@@ -1,5 +1,4 @@
 <?php
-
 declare(strict_types=1);
 
 namespace Flugins\CommandBook\Form;
@@ -53,6 +52,11 @@ final class CommandBookForm implements Form
 
     public function handleResponse(Player $player, $data): void
     {
+        if ($data === null) return;
+        if (trim($data[5]) === '' || $data[5] === null) {
+            $player->sendMessage('§l§a• §r빈 칸을 정확히 입력해주세요!');
+            return;
+        }
         $com = CompoundTag::create()
             ->setInt('rdu', $data[2] ? 1 : 0)
             ->setInt('per', $data[4] ? 1 : 0)
@@ -62,11 +66,6 @@ final class CommandBookForm implements Form
         $item = ItemFactory::getInstance()->get(ItemIds::ENCHANTED_BOOK, 0, 1, $com);
         $item->setCustomName('§l§fCOMMAND BOOK');
         $item->setLore(["소모여부 : $data1", "권한 : $data2", '명령어 : ' . $data[5]]);
-        if ($data === null) return;
-        if (trim($data[5]) === '' || $data[5] === null) {
-            $player->sendMessage('§l§a• §r빈 칸을 정확히 입력해주세요!');
-            return;
-        }
         $player->getInventory()->addItem($item);
     }
 }
