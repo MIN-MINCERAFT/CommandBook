@@ -8,8 +8,8 @@
     <img src="https://img.shields.io/badge/PMMP-gray?style=flat">
 </a>
 
-<a href="https://github.com/poggit/devirion">
-    <img src="https://img.shields.io/badge/Virion-gray?style=flat">
+<a href="https://github.com/poggit/plugin">
+    <img src="https://img.shields.io/badge/Plugin-gray?style=flat">
 </a>
 
 ### [Sinestrea](https://github.com/sky-min) helped me
