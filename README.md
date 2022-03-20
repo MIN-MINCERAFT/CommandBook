@@ -8,11 +8,9 @@
     <img src="https://img.shields.io/badge/PMMP-gray?style=flat">
 </a>
 
-<a href="https://github.com/poggit/plugin">
+<a id="Plugin">
     <img src="https://img.shields.io/badge/Plugin-gray?style=flat">
 </a>
-
-### [Sinestrea](https://github.com/sky-min) helped me
 
 ### How to use ?
 
